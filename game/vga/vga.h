@@ -14,6 +14,6 @@
 
 void bufferSwap(void);
 void drawPixel(int x, int y, uint8_t color);
-void clearScreen(void);
+void clearScreen(uint8_t color);
 
 #endif
