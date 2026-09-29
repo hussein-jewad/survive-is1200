@@ -12,6 +12,7 @@
 
 #include <stdint.h>
 
+void vgaInit(void);
 void bufferSwap(void);
 void drawPixel(int x, int y, uint8_t color);
 void clearScreen(uint8_t color);
