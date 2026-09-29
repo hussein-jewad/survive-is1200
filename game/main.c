@@ -2,25 +2,36 @@
 #include "timer.h"
 #include "other.h"
 #include <stdint.h>
+#include <stdbool.h>
 
-void handleInterrupt (unsigned _irq)
-{ }
+volatile int buttonState;
+volatile bool frameReady = false;
+
+void handle_interrupt (unsigned _irq) {
+    buttonState = get_btn();
+    frameReady = true;
+    timer[0] = 0;
+    return;
+}
 
 
 int main(void) {
+    vgaInit();
     intInit();
-    clearScreen(black);
-    for(int i = 0; i < 320; i++) {
-        drawPixel(0, i, white);
-        drawPixel(i, 0, white);
-    }
-    bufferSwap();
     while(1) {
+        int myColor;
+        if(buttonState == 0) myColor = red;
+        else myColor = blue;
         for (int i = 0; i < screenHeight; i++) {
             for (int j = 0; j < screenWidth; j++) {
-                if(get_btn == 0) (i, j, red);
-                else (i, j, blue);
+                drawPixel(j, i, myColor);
             }
         }
+
+        while(frameReady == false) {
+
+        }
+        frameReady = false;
+        bufferSwap();
     }
 }
