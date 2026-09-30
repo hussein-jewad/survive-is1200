@@ -1,7 +1,6 @@
 #ifndef timerH
 #define timerH
-
-volatile int* timer = (volatile int*) 0x04000020;
+#define timer ((volatile uint32_t*) 0x04000020)
 
 void intInit(void);
 
