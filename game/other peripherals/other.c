@@ -1,4 +1,6 @@
 // random functions from lab 3 that may be useful
+const unsigned char seg[10] = {0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90}; 
+// lookup table for 7seg display
 
 void set_display(int display_number, int value) {
  volatile unsigned char *dp1 = (volatile unsigned char*) (0x04000050 + (0x10 * display_number)); // each 7seg address is 16 bits apart
