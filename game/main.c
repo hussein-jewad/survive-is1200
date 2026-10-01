@@ -1,37 +1,38 @@
 #include "vga.h"
 #include "timer.h"
 #include "other.h"
+#include "graphics.h"
+#include "gamelogic.h"
 #include <stdint.h>
 #include <stdbool.h>
 
-volatile int buttonState;
 volatile bool frameReady = false;
 
 void handle_interrupt (unsigned _irq) {
-    buttonState = get_btn();
     frameReady = true;
     timer[0] = 0;
     return;
 }
 
-
 int main(void) {
+    struct player myPlayer = {160, 120};
+
     vgaInit();
     intInit();
     while(1) {
-        int myColor;
-        if(buttonState == 0) myColor = red;
-        else myColor = blue;
-        for (int i = 0; i < screenHeight; i++) {
-            for (int j = 0; j < screenWidth; j++) {
-                drawPixel(j, i, myColor);
-            }
-        }
+        drawMap(starter_map);
+        drawPlayer(myPlayer, new_piskel_data);
+        drawTextBox("WELCOME TO THE GRASSLAND!");
 
         while(frameReady == false) {
 
         }
         frameReady = false;
+        moveCheck(&myPlayer);
+        
+
         bufferSwap();
     }
+
+    return 0;
 }
