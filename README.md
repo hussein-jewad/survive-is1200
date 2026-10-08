@@ -14,6 +14,7 @@ To run on the dtekv board you type:
 dtekv-run main.bin
 ```
 in the terminal
+
 Note you may need to type 
 ``` jtagd --user-start ``` or ``` jtagconfig ```
  if you get the ``` Unable to connect to local JTAG server ``` error.
