@@ -15,6 +15,14 @@ dtekv-run main.bin
 ```
 in the terminal.
 
-Note you may need to type
+Note that you may need to type
 ``` jtagd --user-start ``` or ``` jtagconfig ```
  if you get the ``` Unable to connect to local JTAG server ``` error.
+
+# Game controls
+
+We use switch 0-3 for movement where switch 0 moves left, 1 is right, 2 is up and 3 is down.
+
+The 9th (last) switch is used for pausing the game, this also shows a map and tells you the controls.
+
+We use the button for interacting with NPCS, items, and using the doors.
