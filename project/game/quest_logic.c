@@ -158,7 +158,7 @@ bool handleWorldInteraction(const struct player *player, RoomId currentRoomId, G
 
     if (currentRoomId == LUNCHROOM && // Handle the lunchroom NPC before checking quest data.
         isNearPosition(player, MRARMY_X, MRARMY_Y)) {
-        gameStateSetMessage(gameState, "X"); // Show this NPC's current response.
+        gameStateSetMessage(gameState, "Did you add a delay to skip the transient state?"); // Show this NPC's current response.
         return true; // An interaction was handled.
     }
 
@@ -276,3 +276,4 @@ void drawQuestMarkers(RoomId currentRoomId, const GameState *gameState) { // hus
         fillRect(KEYCARD_X - 5, KEYCARD_Y - 5, 10, 10, blue); // Draw a blue marker at the keycard location.
     }
 }
+
