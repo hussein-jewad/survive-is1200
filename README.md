@@ -1,6 +1,6 @@
 # interactive-fiction-game
 
-To run the game just extract and cd to where your project folder is
+To run the game just extract and cd to where your project folder is.
 
 After that assuming you have the dtekv toolchain type:
 ```
@@ -13,8 +13,8 @@ To run on the dtekv board you type:
 ```
 dtekv-run main.bin
 ```
-in the terminal
+in the terminal.
 
-Note you may need to type. 
+Note you may need to type
 ``` jtagd --user-start ``` or ``` jtagconfig ```
  if you get the ``` Unable to connect to local JTAG server ``` error.
