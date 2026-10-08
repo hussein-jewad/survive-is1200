@@ -1,6 +1,6 @@
 # interactive-fiction-game
 
-To run the game just extract and cd to the folder
+To run the game just extract and cd to where your folder lives
 
 After that using the dtekv toolchain type:
 ```
