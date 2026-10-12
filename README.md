@@ -1,6 +1,7 @@
 # interactive-fiction-game
+The simplest way to run the game is to download main.bin in the folder "project" and loading it to the emulator (see link below).
 
-To run the game just extract and cd to where your project folder is.
+To compile the game just extract the zip and cd to where your project folder is.
 
 After that assuming you have the dtekv toolchain type:
 ```
