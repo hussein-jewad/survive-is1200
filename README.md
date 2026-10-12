@@ -8,6 +8,7 @@ make
 ```
 
 This will give you a main.bin file that you can either run using the emulator or on the dtekv board.
+
 To run on the emulator just go to this link:
 https://dtekv.fritiof.dev/
 and load the main.bin file.
