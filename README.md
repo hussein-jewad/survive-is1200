@@ -30,4 +30,4 @@ We use switch 0-3 for movement where switch 0 moves left, 1 is right, 2 is up an
 
 The 9th (last) switch is used for pausing the game, this also shows a map and tells you the movement controls.
 
-We use the button for interacting with NPCS, items, and using the doors.
+We use the button for interacting with NPCS, items, and doors.
